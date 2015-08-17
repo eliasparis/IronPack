@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-	before_save :promocode_string
+	before_create :promocode_string
 
 	validates :name, presence: true
 	validates :email, presence: true

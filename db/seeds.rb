@@ -7,4 +7,4 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-User.create([{name: 'Elías', email: 'eli_5_eli_5@hotmail.com', promocode: 'oO9X4ghh'}])
+User.create([{name: 'Elías', email: 'eli_5_eli_5@hotmail.com'}])
