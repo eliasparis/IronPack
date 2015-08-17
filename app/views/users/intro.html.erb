@@ -1,0 +1,11 @@
+<h1> Enter a promocode moth*****r</h1>
+
+
+<%= form_tag('/introdone', method: "post") do %>
+  <%= text_field_tag(:promocode) %>
+  <%= submit_tag("Play") %>
+<% end %>
+
+<% if current_user %>
+<h2>Or continue playing as  <%= link_to current_user.name , {:action => :index} %></h2>
+<% end%>
