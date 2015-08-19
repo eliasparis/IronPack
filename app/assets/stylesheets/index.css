@@ -1,0 +1,340 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+ }
+
+@font-face {
+    font-family: 'dk_lemon_yellow_sunregular';
+    src: url('/assets/dk_lemon_yellow_sun-webfont.eot');
+    src: url('/assets/dk_lemon_yellow_sun-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/dk_lemon_yellow_sun-webfont.woff2') format('woff2'),
+         url('/assets/dk_lemon_yellow_sun-webfont.woff') format('woff'),
+         url('/assets/dk_lemon_yellow_sun-webfont.ttf') format('truetype'),
+         url('/assets/dk_lemon_yellow_sun-webfont.svg#dk_lemon_yellow_sunregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'lobster_regular';
+    src: url('lobster_1.4-webfont.eot');
+    src: url('lobster_1.4-webfont.eot?#iefix') format('embedded-opentype'),
+         url('lobster_1.4-webfont.woff2') format('woff2'),
+         url('lobster_1.4-webfont.woff') format('woff'),
+         url('lobster_1.4-webfont.ttf') format('truetype'),
+         url('lobster_1.4-webfont.svg#lobster_1.4regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+#section2{
+  background-color: #fff;
+}
+#section3{
+  background-color: #f58;
+}
+#home{
+  text-align: center;
+  vertical-align: middle;
+}
+
+.wellcome{
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.text {
+  position: fixed;
+  color: white;
+  font-size: 120px;
+  font-family: dk_lemon_yellow_sunregular, verdana;
+  text-align: center;
+  width: 600px;
+  height:300px;
+  top: 50%;
+  left: 50%;
+  margin-left: -300px; /* margin is -0.5 * dimension */
+  margin-top: -150px; 
+}
+
+.text2 {
+  position: relative;
+  display: block;
+  color: #3e2838;
+  font-size: 70px;
+  font-family: verdana;
+  text-align: left;
+  width: 600px;
+  height:300px;
+  top: 50%;
+  left: 50%;
+  margin-left: -350px; /* margin is -0.5 * dimension */
+  margin-top: -220px; 
+  
+}
+
+.paragr{
+  color: gray;
+  font-size: 12px;
+  font-family: verdana;
+  font-style: italic;
+  width: 400px;
+  position: relative;
+  display: block;
+  top: 50%;
+  left: 50%;
+  margin-left: -350px; /* margin is -0.5 * dimension */
+  margin-top: -10px; 
+}
+
+.ironlogo{
+  float: right;
+  margin-right: -100px;
+  -webkit-transform: rotate(18deg);
+    -moz-transform: rotate(18deg);
+    -ms-transform: rotate(18deg);
+    -o-transform: rotate(18deg);
+    transform: rotate(18deg);
+    height: 450px;
+    margin-top: 200px;
+
+}
+
+#home, #section2, #section3{
+  min-height: 100%;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ }
+
+.button {
+  color: #1e0052;
+  font-size: 120px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  border-radius: 0px;
+  text-align: center;
+  font-family: lobster_regular, verdana;
+  text-shadow: 3px 4px 1px white;
+}
+
+.button a:hover{
+  color: #00ffd0;
+  text-shadow: 3px 4px 1px #003824;
+}
+
+.background {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+.arrows {
+  width: 60px;
+  height: 72px;
+  position: absolute;
+  left: 50%;
+  margin-left: -30px;
+  bottom: 30px;
+}
+
+.arrows path {
+  stroke: #fff;
+  fill: transparent;
+  stroke-width: 2px;  
+  animation: arrow 2s infinite;
+  -webkit-animation: arrow 2s infinite; 
+}
+
+@keyframes arrow
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+@-webkit-keyframes arrow /*Safari and Chrome*/
+{
+0% {opacity:0}
+40% {opacity:1}
+80% {opacity:0}
+100% {opacity:0}
+}
+
+.arrows path.a1 {
+  animation-delay:-1s;
+  -webkit-animation-delay:-1s; /* Safari 和 Chrome */
+}
+
+.arrows path.a2 {
+  animation-delay:-0.5s;
+  -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+}
+
+.arrows path.a3 { 
+  animation-delay:0s;
+  -webkit-animation-delay:0s; /* Safari 和 Chrome */
+}
+
+.blue-purple {
+  background-color: #f66;
+  background-image: -webkit-linear-gradient(bottom, #f66, #53fde9);
+  background-image: linear-gradient(to top,#f66, #53fde9);
+  -webkit-animation: fadeInOut 7s ease;
+  -moz-animation: fadeInOut 7s ease;
+  animation: fadeInOut 7s ease;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.green-blue {
+  background-color: #78d9c2;
+  background-image: -webkit-linear-gradient(left, #78d9c2, #d9ce78);
+  background-image: linear-gradient(to right,#78d9c2, #d9ce78);
+  -webkit-animation: fadeOutIn 7s ease;
+  -moz-animation: fadeOutIn 7s ease;
+  animation: fadeOutIn 7s ease;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeOutIn {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeOutIn {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOutIn {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-moz-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

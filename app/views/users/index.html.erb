@@ -1,6 +1,59 @@
-<%= stylesheet_link_tag "aplication" %>
-<h1>USER TEMPLATE</h1>
-<h5><%= current_user.name %></h5>
+<%= stylesheet_link_tag "index" %>
 
-<%= link_to "Play", play1_path %>
+<section id="home" data-type="parallax_section" data-speed="10">
+	<article>
+		<div class="ironhacker">
+			<div class="background blue-purple"></div>
+			<div class="background green-blue"></div>
+			<div class="wellcome">
+				<span class="text">Wellcome <%= current_user.name %>!</span>
+				<di class="scroll">
+					<svg class="arrows">
+						<path class="a1" d="M0 0 L30 32 L60 0"></path>
+						<path class="a2" d="M0 20 L30 52 L60 20"></path>
+						<path class="a3" d="M0 40 L30 72 L60 40"></path>
+					</svg>
+				</div>
+			</div>
+
+		</div>
+	</article>
+</section>
+
+<section id="section2" data-type="parallax_section" data-speed="10">
+	<article>
+		<div class="ironhacker">
+			<div class="wellcome">
+				<span class="text2">this is your ultimate custom iron-pack</span>
+				<p class="paragr">Since you have a pass to enter this app, means that you are a real #ironhacker. Or at least ... you should!. 
+				Test your #ironhacker skills with this fancy game and proove them. If you are #ironhacker enough there is a cool prize waiting just for you.</p>
+				<img class ="ironlogo fluid" src="/ironpack_logo.png" alt="iron pack logo" />
+			</div>
+		</div>
+	</article>
+</section>
+
+<section id="section3" data-type="parallax_section" data-speed="10">
+	<article>
+		<div class="ironhacker">
+			<div class="button"><%= link_to "Play!", save_path %></div>
+		</div>
+	</article>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
