@@ -1,8 +1,23 @@
-<h3>On the game</h3>
 
-<p><%= current_user.name %></p>
-<p><%= current_user.screen %></p>
 
-<%= link_to "Play T second!", save_path %>
+<!-- <%= link_to "Play T second!", save_path %> -->
+<div class="one_ins_background">
+	<div class="one_ins_panel">
+		<span class="trwu"> THE RAINBOW WARM UP </span>
+	
+		<div class="trwu_txt"><p>Well <%= current_user.name %>, it´s time to play! <br>
+			But our fingers are still pretty lazy. Let´s try a little warm up session. We need to keep motivated to face this hard #ironhacker test!<br>
+			This first screen will be simple and fun for you. <br>
+			Just click on the squared rainbow.<br>
+			But pay attention!<br>
+			It will decrease on each click!
+		 </p></div>
+		 <div class="wrapper_ins_rainbow">
+			<div class="ins_rainbow"></div>
+		</div>
+		<div class="play_one_button"><span id="play_one_button">Play!</span></div>
+	</div>
+</div>
+
 
 
