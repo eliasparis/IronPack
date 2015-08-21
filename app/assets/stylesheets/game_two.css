@@ -1,98 +1,115 @@
 .two_ins_background{
   overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .two_cero_two{
-  background: green;
-  width: 35px;
-  height: 35px;
+  width: 64px;
+  height: 109px;
   position: absolute;
 }
 
 .two_zero_zero{
-  background: blue;
-  width: 35px;
-  height: 35px;
+  width: 64px;
+  height: 109px;
   position: absolute;
 }
 
 #hero {
-  background: #ff0000;
-  width: 20px;
-  height: 20px;
+  background-repeat: no-repeat;
+  width: 72px;
+  height: 41px;
   position: absolute;
 }
 
 #laser {
-  background: #00ff00;
+  background: #00ebcb;
   width: 2px;
-  height: 50px;
+  height: 40px;
   position: absolute;
+  box-shadow: 0 0 3px #adffed;
+  border-radius: 3px;
 }
 .enemy {
-  background: gold;
-  width: 35px;
-  height: 35px;
+  width: 76px;
+  height: 122px;
   position: absolute;
 }
-#score {
-  color: #ffffff;
-  font-size: 18pt;
+
+.gamepics{
   position: absolute;
-  left: 20px;
-  top: 20px;
+  left: 50%;
+  top: 50%;
+   -webkit-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
 }
+
 #gameover {
-  color: #ff0000;
-  font-size: 20px;
+  color: #ff005d;
+  font-size: 110px;
   position: absolute;
-  left: 160px;
-  top: 200px;
+  font-family: lobster_regular, verdana;
+  left: 50%;
+  top: 50%;
+   -webkit-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
   visibility: hidden;
 }
 
 #looselife {
-  color: #ff0000;
-  font-size: 20px;
+  color: #fff;
+  font-size: 200px;
   position: absolute;
-  left: 160px;
-  top: 200px;
+  font-family: lobster_regular, verdana;
+  left: 50%;
+  top: 50%;
+   -webkit-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
   visibility: hidden;
+
 }
 #keeptrying {
-  color: #ff0000;
-  font-size: 20px;
+  color: #fff;
+  font-size: 85px;
   position: absolute;
-  left: 160px;
-  top: 200px;
+  font-family: lobster_regular, verdana;
+  left: 50%;
+  top: 50%;
+   -webkit-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
   visibility: hidden;
+  
 }
 
 .lifes{
-  background-color: gray;
-  width: 100px; 
+
+  width: 120px; 
   height:30px;
   padding: 8px;
 }
 
 .life{
-  background-color: red;
-  width: 20px;
-  height: 20px;
+  width: 37px;
+  height: 37px;
   display: inline-block;
 }
 
-#game_two_btn {
-  color: gold;
-}
 
 .count_d {
   position: absolute;
   display: block;
   width: 100%;
   height: 100%;
-  color: black;
+  font-family: lobster_regular, verdana;
+  color: #28122b;
   text-align: center;
+  margin-top: 10%;
   font-size: 300px;
   left: 50%;
   top: 50%;
@@ -101,6 +118,230 @@
             transform: translateX(-50%) translateY(-50%);
 }
 
+.two_scroller{
+  overflow: auto;
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) ;
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+  display: block;
+  color: #28122b;
+}
+
+.two_title{
+  padding-top: 3%;
+  text-align: center;
+  font-family: dk_lemon_yellow_sunregular;
+  font-size: 60px;
+}
+
+.two_instructions{
+  padding-top: 50px;
+  text-align: center;
+  font-family: verdana;
+  line-height: 150%;
+  font-weight: ligth;
+  font-size: 15px;
+}
+
+.two_container{
+  display: block;
+}
+
+.two_ins_icon{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+  position: relative;
+}
+
+.two_d_left{
+  display: block;
+  width: 50%;
+  height: 100px;
+  float: left;
+}
+
+.two_d_right{
+  display: block;
+  width: 50%;
+  height: 100px;
+  float: right;
+}
+
+.two_ins_text{
+  display: block;
+  padding-top: 15px;
+  font-family: verdana;
+  line-height: 150%;
+  font-weight: ligth;
+  font-size: 13px;
+  text-align: center;
+  color: gray;
+}
+
+#spacebar{
+  width: 180px;
+  height: 40px;
+  background-color: #e7edd9;
+  border-radius: 5px; 
+  font-family: arial;
+  font-size: 11px;
+  color: gray;
+  left: 90px;
+  border: 1px solid lightgray;
+  box-shadow: inset 0px -3px  #b4bf9c;  
+  float: right; 
+  margin-right: 50px;
+  margin-top: 55px;
+}
+
+#spacebar:hover{
+  padding-top: 2px;
+  width: 178px;
+  height: 38px;
+  font-size: 10px;
+}
+
+#arrow_container{
+  height: 80px;
+  width: 180px;
+  position: absolute;
+  bottom: 2%;
+  margin-left: 50px;
+  padding-bottom:5px; 
+
+}
+
+#arrow_c_up{
+  height: 40px;
+  width: 180px;
+  padding: 1px;
+}
+
+#arrow_c_dw{
+  height: 42px;
+  width: 180px;
+  padding: 1px;
+}
+
+.arrow_key{
+  background-color: #e7edd9;
+  border-radius: 5px; 
+  color: gray; 
+  font-family: arial;
+  font-size: 11px;
+  width: 39px;
+  height: 39px; 
+  margin: 1px;
+  display: inline-block;
+  margin: 2px;
+  border: 1px solid lightgray;
+  position: relative;
+  box-shadow: inset 0px -3px  #b4bf9c;  
+}
+
+.arrow_emoji{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+}
+
+.ins_heart{
+  display: inline-block;
+  margin: 10px;
+  margin-top: 25px;
+  font-size: 55px;
+  color: #ff005d;
+}
+
+#game_two_btn {
+  margin: 70px;
+  display: block;
+  position: relative; 
+  font-family: lobster_regular, verdana;
+  color: #28122b;
+  text-align: center;
+}
+
+#game_two_play{
+  position: absolute;
+  font-size: 70px;
+  margin-bottom: 50px; 
+  -webkit-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+}
+
+/* Stars 
+------------------------------------- */
+
+#space,
+.stars {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.stars {
+  background-image: radial-gradient(2px 2px at 20px 30px, #eee, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 40px 70px, #fff, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 90px 40px, #fff, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 130px 80px, #fff, rgba(0, 0, 0, 0)), radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0, 0, 0, 0));
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: zoom 5s infinite;
+  opacity: 0;
+}
+
+.stars:nth-child(1) {
+  background-position: 50% 50%;
+  animation-delay: 0s;
+}
+
+.stars:nth-child(2) {
+  background-position: 20% 60%;
+  animation-delay: 1s;
+}
+
+.stars:nth-child(3) {
+  background-position: -20% -30%;
+  animation-delay: 2s;
+}
+
+.stars:nth-child(4) {
+  background-position: 40% -80%;
+  animation-delay: 3s;
+}
+
+.stars:nth-child(5) {
+  background-position: -20% 30%;
+  animation-delay: 4s;
+}
+
+@keyframes zoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+    animation-timing-function: ease-in;
+  }
+  85% {
+    opacity: 1;
+    transform: scale(2.8);
+    animation-timing-function: linear;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3.5);
+  }
+}
 
 
 

@@ -17,17 +17,25 @@ $(document).ready(function(){
 	}
 
 	function clickPlay(){
-
+		$('.two_ins_background').css('background-color', '#000')
+		
 		var gamehtml = ['<div id="gameover">GAME OVER</div>',
 						'<div class="lifes">',
-							'<div class="life" id="1"></div>',
-							'<div class="life" id="2"></div>',
-							'<div class="life" id="3"></div>',
+							'<div class="life" id="1"><img src="/heart.png"></div>',
+							'<div class="life" id="2"><img src="/heart.png"></div>',
+							'<div class="life" id="3"><img src="/heart.png"></div>',
 						'</div>',
-						'<div id="hero"></div>',
+						'<div id="hero"><img src="/macbook.png" height="40" width="69"></div>',
 						'<div id="laser"></div>',
 						'<div id="looselife">WOPS!</div>',
-						'<div id="keeptrying">Keep trying</div>'
+						'<div id="keeptrying">Keep trying</div>',
+						'<div id="space">',
+						  '<div class="stars"></div>',
+						  '<div class="stars"></div>',
+						  '<div class="stars"></div>',
+						  '<div class="stars"></div>',
+						  '<div class="stars"></div>',
+						'</div>'
 			    		].join('\n');
 
 		$('.two_ins_background').html(gamehtml);
@@ -48,7 +56,7 @@ $(document).ready(function(){
 		var RIGHT_KEY = 39;
 		var DOWN_KEY = 40;
 		var SPACE_KEY = 32;
-		var HERO_MOVEMENT = 9;
+		var HERO_MOVEMENT = 11;
 
 		var lastLoopRun = 0;
 		var iterations = 0;
@@ -143,6 +151,11 @@ $(document).ready(function(){
 		function setPosition(sprite) {
 		  var e = document.getElementById(sprite.element);
 		  e.style.left = sprite.x + 'px';
+		  e.style.top = sprite.y + 'px';
+		}
+		function setPositionLaser(sprite) {
+		  var e = document.getElementById(sprite.element);
+		  e.style.left = (sprite.x +25) + 'px';
 		  e.style.top = sprite.y + 'px';
 		}
 
@@ -279,7 +292,7 @@ $(document).ready(function(){
 
 		function showSprites() {
 		  setPosition(hero);
-		  setPosition(laser);
+		  setPositionLaser(laser);
 		  for (var i = 0; i < enemies.length; i++) {
 		    setPosition(enemies[i]);
 		  }
@@ -309,7 +322,8 @@ $(document).ready(function(){
 		    ensureBoundsFiles(two_zero_zero_array[i], true)
 		  }
 
-		  laser.y -= 12;
+		  laser.y -= 30;
+
 		}
 
 		function addEnemy() {
@@ -324,11 +338,12 @@ $(document).ready(function(){
 		  
 		  if (getRandom(interval_enemies) == 0) {
 		    var elementName = 'enemy' + getRandom(10000000);
-		    var enemy = createSprite(elementName, getRandom(window_width), -20, 35, 35);
+		    var enemy = createSprite(elementName, getRandom(window_width), -20, 76, 122);
 		    
 		    var element = document.createElement('div');
 		    element.id = enemy.element;
 		    element.className = 'enemy'; 
+		    $(element).append('<img src="/404.png" widht="70px" height="112px" class="gamepics">')
 		    document.children[0].appendChild(element);
 		    
 		    enemies[enemies.length] = enemy;
@@ -347,11 +362,12 @@ $(document).ready(function(){
 		  
 		  if (getRandom(interval_green) == 0) {
 		    var elementName = 'two_cero_two' + getRandom(10000000);
-		    var two_cero_two = createSprite(elementName, getRandom(window_width), -20, 35, 35);
+		    var two_cero_two = createSprite(elementName, getRandom(window_width), -20, 64, 109);
 		    
 		    var element = document.createElement('div');
 		    element.id = two_cero_two.element;
-		    element.className = 'two_cero_two'; 
+		    element.className = 'two_cero_two';
+			$(element).append('<img src="/202.png" widht="60px" height="102px" class="gamepics">') 
 		    document.children[0].appendChild(element);
 		    
 		    two_cero_two_array[two_cero_two_array.length] = two_cero_two;
@@ -370,11 +386,12 @@ $(document).ready(function(){
 		  
 		  if (getRandom(interval_blue) == 0) {
 		    var elementName = 'two_zero_zero' + getRandom(10000000);
-		    var two_zero_zero = createSprite(elementName, getRandom(window_width), -20, 35, 35);
+		    var two_zero_zero = createSprite(elementName, getRandom(window_width), -20, 64, 109);
 		    
 		    var element = document.createElement('div');
 		    element.id = two_zero_zero.element;
 		    element.className = 'two_zero_zero'; 
+		    $(element).append('<img src="/200.png" widht="60px" height="103px" class="gamepics">') 
 		    document.children[0].appendChild(element);
 		    
 		    two_zero_zero_array[two_zero_zero_array.length] = two_zero_zero;
@@ -432,8 +449,8 @@ $(document).ready(function(){
 		  toggleKey(evt.keyCode, false);
 		};
 
-		var hero = createSprite('hero', window_width/2, window_height - 25, 20, 20);
-		var laser = createSprite('laser', 0, -120, 2, 50);
+		var hero = createSprite('hero', window_width/2 - 40, window_height - 40, 72, 40);
+		var laser = createSprite('laser', 0, 0, 2, 40);
 
 		loop();
 
