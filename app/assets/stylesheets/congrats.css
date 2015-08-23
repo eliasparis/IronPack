@@ -1,0 +1,120 @@
+.congrats_bg{
+	background-color: gold;
+	width: 100%;
+}
+
+.congrats_container{
+	width: 850px;
+	position: relative;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+	padding-top: 100px;
+	text-align: center;
+	color: #3c3965;
+	font-family: dk_lemon_yellow_sunregular;
+    font-size: 60px;
+}
+
+.congrats_txt{
+	font-family: verdana;
+	font-size: 14px;
+	padding-top: 40px;
+}
+
+.congrats_txt_2{
+	font-family: verdana;
+	font-size: 14px;
+	color: gray;
+}
+
+.congrats_p_a{
+	color: gray;
+	font-size: 15px;
+}
+
+.congrats_repeat{
+	font-family: verdana;
+}
+
+.repeat_game{
+	width: 100px;
+	height: 140px;
+	padding-top: 40px;
+	padding-left:15px;
+	padding-right: 15px; 
+	display: inline-block;
+}
+
+.repeat_game_pic{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+#gift{
+}
+
+#gift:hover{
+	 cursor: pointer; cursor: hand;
+}
+
+.gift_box{
+	color: white;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.gift_box_each{
+	font-size: 20px;
+}
+
+.gift_box_open{
+	visibility: hidden;
+	font-family: verdana;
+	font-size: 12px;
+	border: 1px solid #f5fde3;
+	border-radius: 5px;
+	padding-top: 10px;
+	width: 600px;
+	position: relative;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    box-shadow: inset 0px -3px  #f5fde3;  
+}
+
+.gift_link{
+	padding: 1px;
+	color: #3c3965;
+}
+
+.gift_link:hover{
+	font-size: 14px;
+}
+
+.gift_link:visited{
+	color: #e6005c;
+}
+
+.text_discover{
+	padding-bottom: 25px;
+	color: #3c3965;
+	font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

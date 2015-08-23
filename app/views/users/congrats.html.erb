@@ -1,4 +1,23 @@
-<h2>WOOOOOOOOOW</h2>
-
-
-<p><%= current_user.name %> is the fucking winner </p>
+<div class="congrats_bg">
+	<div class="congrats_container">
+		<h2>WOOOW!</h2>
+		<p>Congrats <%= current_user.name %> </p>
+		<p class="congrats_txt"> You definately are a #ironhacker and you deserve your custom iron-pack.<br> Enjoy it and have fun playing again your favourite screen.</p>
+		<div class="congrats_repeat">
+			<div class="repeat_game">
+				<a href="/screen_one"><img src="/rbpic.jpg" class="repeat_game_pic">
+				<p class="congrats_txt_2">RAINBOW WARM UP</p></a>
+			</div>
+			<div class="repeat_game">
+				<a href="/screen_two"><img src="/str.jpg" class="repeat_game_pic">
+				<p class="congrats_txt_2">404 AMAZING SHOOTER</p></a>
+			</div>
+		</div>
+		<div class="gift_box">
+			<div class="gift_box_each"><img src="/gift.png" id="gift"></div>
+			<div class="gift_box_each"><p>discover your iron-pack gift</p></div>
+			<div class="gift_box_open">
+			</div>
+		</div>
+	</div>
+</div>

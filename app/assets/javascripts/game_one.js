@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
 
 	$('#play_one_button').on('click', beginGameOne);
