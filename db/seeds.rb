@@ -8,5 +8,6 @@
 
 
 User.create([{name: 'Elías', email: 'eli_5_eli_5@hotmail.com'}])
+User.create([{name: 'Quino', email: 'quino@ironhack.com'}])
 
 Url.create([{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1}])
