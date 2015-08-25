@@ -1,0 +1,89 @@
+<div class="ranking_bg">
+
+		<a href="/congrats" class="back_button_rk">BACK</a>
+
+		<div class="congrats_container">
+
+		<div class="space">
+		  <div class="ship">
+		    <div class="ship-rotate">
+		      <div class="pod"></div>
+		      <div class="fuselage"></div>
+		    </div>
+		  </div>
+		  <div class="ship-shadow"></div>
+		  <div class="mars">
+		    <div class="tentacle"></div>
+		    <div class="flag">
+		      <div class="small-tentacle"></div>
+		    </div>
+		    <div class="planet">
+		      <div class="surface"></div>
+		      <div class="crater1"></div>
+		      <div class="crater2"></div>
+		      <div class="crater3"></div>
+		    </div>
+		  </div>
+		  <div class="test"></div>
+		</div>
+
+			<div >
+				<span><b>THE IRONHACKERS RANKING</b></span>
+			</div>	
+			
+			<%if @users_sorted.count >= 3%>
+			<div class="ranking_oficial">
+				
+				<% if @users_sorted[0].id === current_user.id %>
+					<div class="ranking_winner" style="background-color: white;">
+				<% else %>
+					<div class="ranking_winner">
+				<%end%>
+						<span style="color: #ff0a7c;">1</span>
+						<span style="color: #3a2447;"><%= @users_sorted[0].name %></span>
+						<span style="font-size: 36px;"><%= @users_sorted[0].points %> points</span>
+						<img src="/primi.png" height="80px" style="position: absolute;" >
+					</div>
+
+				<% if @users_sorted[1].id === current_user.id%>
+					<div class="ranking_next" style="background-color: white;">
+				<% else %>
+					<div class="ranking_next">
+				<%end%>
+						<span style="color: #1CC2EE;">2</span>
+						<span style="color: #243a47;"><%= @users_sorted[1].name %></span>
+						<span style="font-size: 30px;"><%= @users_sorted[1].points %> points</span>
+						<img src="/segun.png" height="65px" style="position: absolute;" >
+					</div>
+
+				<% if @users_sorted[2].id === current_user.id%>
+					<div class="ranking_next" style="background-color: white;">
+				<% else %>
+					<div class="ranking_next">
+				<%end%>
+						<span style="color: #a249da;">3</span>
+						<span style="color: #2c4724;"><%= @users_sorted[2].name %></span>
+						<span style="font-size: 30px;"><%= @users_sorted[2].points %> points</span>
+						<img src="/terce.png" height="40px" style="position: absolute; padding-top:10px;" >
+					</div>
+				
+				<% @users_sorted.each.with_index do |user, index|%>
+					<%if index>2%>
+						<%if user.id === current_user.id %>
+							<div class="ranking_loosers" style="background-color: white;">
+						<%else%>
+							<div class="ranking_loosers">
+						<%end%>		
+							<%= index +1 %>    <%= user.name%>  <span style="font-size: 23px;"><%= user.points%> points</span>
+							</div>
+					<%end%>
+				<% end%>
+
+			</div>
+			<%else%>
+			<%end%>
+
+			
+		</div>
+	
+</div>

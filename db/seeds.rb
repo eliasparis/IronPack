@@ -6,8 +6,19 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+CSVReader.csv_read('./public/urls.csv').each do |url|
+	if Url.exists?(:url => url[:url])
+		puts "Url already exists"
+	else
+		Url.create! url	
+	end
+end
 
-User.create([{name: 'Elías', email: 'eli_5_eli_5@hotmail.com'}])
-User.create([{name: 'Quino', email: 'quino@ironhack.com'}])
+CSVReader.csv_read('./public/users2.csv').each do |ironhacker|
+	if User.exists?(:email => ironhacker[:email])
+		puts "User already exists"
+	else
+		User.create! ironhacker 	
+	end
+end
 
-Url.create([{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1},{name: 'bsfdbsf', url: 'dfsfsdfd.com', group: 1}])

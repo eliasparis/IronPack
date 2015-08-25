@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 	before_create :promocode_string
-
+	belongs_to :ranking
+	
 	validates :name, presence: true
 	validates :email, presence: true
 	#validates :promocode, length: { is: 8 }, uniqueness: true
@@ -20,5 +21,4 @@ class User < ActiveRecord::Base
 			i
 		end
 	
-
 end

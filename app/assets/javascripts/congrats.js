@@ -11,7 +11,7 @@ $(document).ready(function(){
 		
 		var request = $.ajax({
 						type: "GET",
-						url: "http://localhost:3000/urls",
+						url: "/urls",
 						dataType: "json",
 		});
 		
@@ -19,9 +19,7 @@ $(document).ready(function(){
 
 
 		function handleUrl(url){
-			console.log(url.length);
 			for (i = 0; i <= url.length; i++) {
-				console.log(i);
 
 				var urls = ['<a href="'+ url[i].url +'" target="_blank"class="gift_link" id="'+ i +'"><p><b>'+ url[i].name +'</b></p></a>'];
 

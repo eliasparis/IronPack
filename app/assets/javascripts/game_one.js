@@ -2,6 +2,9 @@ $(document).ready(function(){
 
 	$('#play_one_button').on('click', beginGameOne);
 
+	var time_playing_one_begining = 0;
+	var time_playing_one_end = 0;
+
 	var instructions_game_one_html = 
 			['<div class="rainbow_sq">',
 			'</div>'
@@ -12,6 +15,7 @@ $(document).ready(function(){
 		rainbow_sq_clicks = 1;
 		w = 90;
 		h = 80;
+		time_playing_one_begining = new Date()
 	}
 
 	var rainbow_sq_clicks = 1;
@@ -56,6 +60,7 @@ $(document).ready(function(){
 			h -= 6;
 		}else if (rainbow_sq_clicks > 13){
 			$('.one_ins_background').html(cool);
+			time_playing_one_end = new Date();
 		}else{
 			w -=2;
 			h -=1;
@@ -79,6 +84,16 @@ $(document).ready(function(){
 	$(document).on('click','.save',saveGame);
 
 	function saveGame(){
+
+		number = time_playing_one_begining - time_playing_one_end;
+		points = Math.round(number/100);
+		console.log(points);
+		var request = $.ajax({
+						data: {points: points, game: 1},
+						type: "POST",
+						url: "/points_updating",
+						success: console.log('Points sended'),
+		});
 		window.location.replace('/saving');
 	}
 

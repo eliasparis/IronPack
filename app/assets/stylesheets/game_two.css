@@ -30,7 +30,7 @@
   height: 40px;
   position: absolute;
   box-shadow: 0 0 3px #adffed;
-  border-radius: 3px;
+  border-radius: 3px; 
 }
 .enemy {
   width: 76px;

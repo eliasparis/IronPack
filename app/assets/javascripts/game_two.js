@@ -2,8 +2,12 @@ $(document).ready(function(){
 	$('#game_two_btn').on('click', counterDown)
 
 	var count_d_n = 3
+	var time_playing_two_begining = 0;
+	var time_playing_two_end = 0;
 	
 	function counterDown() {
+
+		time_playing_two_begining = new Date();
 
 		if (count_d_n > 0) {
 			var count_d = ['<div class="count_d">' + count_d_n +'</div>']
@@ -12,8 +16,7 @@ $(document).ready(function(){
 			setTimeout(counterDown, 1000);
 		}else{
 			clickPlay();
-		};
-		 
+		}; 
 	}
 
 	function clickPlay(){
@@ -48,8 +51,6 @@ $(document).ready(function(){
 		var window_width = $(window).width();
 		var hero_height = $('#hero').height();
 		var hero_width = $('#hero').width();
-		var laser_width = $('#laser').width();
-		var laser_heigth = $('#laser').height();
 
 		var LEFT_KEY = 37;
 		var UP_KEY = 38;
@@ -150,12 +151,12 @@ $(document).ready(function(){
 
 		function setPosition(sprite) {
 		  var e = document.getElementById(sprite.element);
-		  e.style.left = sprite.x + 'px';
+		  e.style.left = (sprite.x) + 'px';
 		  e.style.top = sprite.y + 'px';
 		}
 		function setPositionLaser(sprite) {
 		  var e = document.getElementById(sprite.element);
-		  e.style.left = (sprite.x +25) + 'px';
+		  e.style.left = (sprite.x) + 'px';
 		  e.style.top = sprite.y + 'px';
 		}
 
@@ -173,7 +174,7 @@ $(document).ready(function(){
 		    hero.x += HERO_MOVEMENT;
 		  }
 		  if (controller.space) {
-		    laser.x = hero.x + 9;
+		    laser.x = hero.x + 30;
 		    laser.y = hero.y - laser.h;
 		  }
 		  
@@ -253,6 +254,21 @@ $(document).ready(function(){
 		}
 
 		function saveGame(){
+
+			time_playing_two_end = new Date();
+			difference_in_s = (time_playing_two_end.getTime() - time_playing_two_begining.getTime() )/1000;
+
+			seconds = (2000*difference_in_s)/350;
+			console.log(difference_in_s);
+			points = Math.round(seconds);
+			console.log(points)
+			var request = $.ajax({
+							data: {points: points, game: 2},
+							type: "POST",
+							url: "http://localhost:3000/points_updating",
+							success: console.log('Points sended'),
+			});
+
 			window.location.replace('/saving');
 		}
 

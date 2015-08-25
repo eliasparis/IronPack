@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   get '/screen_two' => 'users#game_two', :as => 'play2'
   get '/congrats' => 'users#congrats', :as => 'congrats'
   get '/saving' => 'users#wins_update_screen', :as => 'save'
+  get '/rankings' => 'urls#ranking', :as => 'rankings'
   get '/:promocode' => 'sessions#create'
   post '/introdone' => 'sessions#create'
+  post '/points_updating' => 'urls#points_refresh'
 
 end

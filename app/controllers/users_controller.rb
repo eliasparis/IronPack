@@ -75,4 +75,5 @@ class UsersController < ApplicationController
 	      redirect_to :action => 'no_cookies'
 	    end
   	end
+
 end
