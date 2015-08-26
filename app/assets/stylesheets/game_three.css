@@ -1,0 +1,112 @@
+.three_ins_background{
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: #4a4e64; 
+}
+
+.three_scroller{
+  overflow: auto;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) ;
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+  display: block;
+}
+
+.area{
+	display: inline-block;
+	width: 50%;
+	height: 100%;
+}
+
+.sublime{
+	float: left;
+	
+}
+
+.vim{
+	float: right;
+	
+}
+
+.color_sub{
+	background-color: #251d21;
+}
+
+.color_vim{
+	background-color: white;
+}
+
+.text_editor{
+	border-radius: 10px;
+	height: 80%;
+	-webkit-box-shadow: 0px 10px 10px -6px rgba(0,0,0,0.59);
+	-moz-box-shadow: 0px 10px 10px -6px rgba(0,0,0,0.59);
+	box-shadow: 0px 10px 10px -6px rgba(0,0,0,0.59);
+}
+
+.sublime_margin{
+	margin: 30px 9px 15px 30px;
+}
+
+.vim_margin{
+	margin: 70px 30px 12px 9px;
+}
+
+.text_area{
+	display: block;
+	height: 96.5%;
+	border-radius: 0px 0px 4px 4px ;
+}
+
+.window_bar{
+	display: block;
+	height: 23px;
+	background-color: lightgray;
+	border-radius: 4px 4px 0px 0px;
+}
+
+.the_buttons{
+	height: 15px;
+	display: inline-block;
+}
+
+.but_each{
+	border-radius: 50px;
+	height: 13px;
+	width: 13px;
+	display: inline-block;
+	margin-top: 5px;
+	margin-left: 6px;
+}
+
+.thered{
+	background-color: #f40b55;
+
+}
+
+.thegreen{
+	background-color: #01e918;
+}
+
+.theyell{
+	background-color: #fedc01;
+}
+
+.text_stage{
+	padding: 15px;
+}
+
+.input{
+	margin: 25px 17px 0px 35px;
+}
+
+.your_input{
+	width: 100%;
+	height: 25px;
+}

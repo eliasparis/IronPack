@@ -3,7 +3,8 @@
 	padding-top: 15px;
   width: 100%;
   height: 100%;
-
+  padding-bottom: 50px;
+  overflow: hidden;
 }
 
 .ranking_container{
@@ -14,6 +15,15 @@
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
   text-align: center;
+}
+
+.rk_scroller{
+  overflow: auto;
+
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  display: block;
 }
 
 .back_button_rk{

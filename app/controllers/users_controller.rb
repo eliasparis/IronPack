@@ -26,6 +26,14 @@ class UsersController < ApplicationController
 		end
 	end
 
+	def game_three
+		unless current_user.screen === 3 || user_complete_games
+			screen_controller
+		else
+			render 'play3'
+		end
+	end
+
 	def congrats
 		unless user_complete_games
 			screen_controller
@@ -38,9 +46,9 @@ class UsersController < ApplicationController
 		@user = User.find_by(id: cookies[:user_id])
 		@user.screen += 1
 		
-		if @user.screen > 2
+		if @user.screen > 3
 			@user.complete = true
-			@user.screen = 3
+			@user.screen = 4
 		end 
 
 		@user.save
@@ -65,7 +73,9 @@ class UsersController < ApplicationController
   			redirect_to play1_path
   		elsif current_user.screen === 2
   			redirect_to play2_path
-  		elsif current_user.complete === true && current_user.screen > 2
+  		elsif current_user.screen === 3
+  			redirect_to play3_path
+  		elsif current_user.complete === true && current_user.screen > 3
   			redirect_to congrats_path
   		end
   	end

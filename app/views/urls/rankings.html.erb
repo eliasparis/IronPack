@@ -1,5 +1,5 @@
 <div class="ranking_bg">
-
+	<div class="rk_scroller">
 		<a href="/congrats" class="back_button_rk">BACK</a>
 	<div class="ranking_container">
 			<div class="congrats_container">
@@ -112,14 +112,14 @@
 									<span style="font-size: 18px;"><%= @users_sorted_one[1][:points] %> miliseconds</span>
 								</div>
 
-							<% if @users_sorted_two[2][:id] === current_user.id%>
+							<% if @users_sorted_one[2][:id] === current_user.id%>
 								<div class="ranking_next by_game2 user_coincidence" >
 							<% else %>
 								<div class="ranking_next by_game2">
 							<%end%>
 									<span style="color: #a249da;">3</span>
-									<span style="color: #243a47;"><%= @users_sorted_two[2][:name] %></span>
-									<span style="font-size: 18px;"><%= @users_sorted_two[2][:points] %> miliseconds</span>
+									<span style="color: #243a47;"><%= @users_sorted_one[2][:name] %></span>
+									<span style="font-size: 18px;"><%= @users_sorted_one[2][:points] %> miliseconds</span>
 								</div>
 
 							<% @users_sorted_one.each.with_index do |user, index|%>
@@ -129,7 +129,7 @@
 							<%else%>
 								<div class="ranking_loosers by_game3">
 							<%end%>		
-								<%= index +1 %>    <%= user[:name]%>  <span style="font-size: 16px;"><%= user[:points]%> points</span>
+								<%= index +1 %>    <%= user[:name]%>  <span style="font-size: 16px;"><%= user[:points]%> miliseconds</span>
 								</div>
 							<%end%>
 							<% end%>
@@ -188,5 +188,6 @@
 				</div>
 				
 			</div>
+	</div>
 	</div>
 </div>
