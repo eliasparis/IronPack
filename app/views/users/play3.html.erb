@@ -11,15 +11,46 @@
 					</div>
 				</div>
 				<div class="text_area color_sub">
-					...
-
 					
-
-
+					<div class="text_stage">
+						<div><span>12</span> <span id="1">var Item = function (name, price){</span></div>
+						<div><span>13</span> <span id="2" class="ident">this.name = name;</span></div>
+						<div><span>14</span> <span id="3" class="ident">this.price = price;</span></div>
+						<div><span>15</span> <span id="4">}</span></div>
+						<div><span>16</span><span id="5"></span></div>
+						<div><span>17</span> <span id="6">var apple = new Item ('apple', 10);</span></div>
+						<div><span>18</span> <span id="7">var orange = new Item ('orange', 5);</span></div>
+						<div><span>19</span> <span id="8">var grapes = new Item ('grapes', 15);</span> </div>
+						<div><span>20</span><span id="9"></span></div>
+						<div><span>21</span> <span id="10">var ShoppingCart = function (){</span></div>
+						<div><span>22</span><span id="11"></span></div>
+						<div><span>23</span> <span id="12" class="ident">this.list = [];</span></div>
+						<div><span>24</span><span id="13"></span></div>
+						<div><span>25</span> <span id="14" class="ident">this.calctotal = function(){</span></div>
+						<div><span>26</span><span id="15"></span></div>
+						<div><span>27</span> <span id="16" class="ident2">var total = 0;</span></div>
+						<div><span>28</span><span id="17"></span></div>
+						<div><span>29</span> <span id="18" class="ident2">this.list.forEach(function (item)</span></div>
+						<div><span>30</span> <span id="19" class="ident2">{</span></div>
+						<div><span>31</span> <span id="20" class="ident3">total += item.price;</span></div>
+						<div><span>32</span> <span id="21" class="ident2">});</span></div>
+						<div><span>33</span><span id="22"></span></div>
+						<div><span>34</span> <span id="23" class="ident">};</span></div>
+						<div><span>35</span> <span id="24">}</span></div>
+						<div><span>36</span><span id="25"></span></div>
+						<div><span>37</span><span id="26"></span></div>
+						<div><span>38</span> <span id="27">var cart = new ShoppingCart ();</span></div>
+						<div><span>39</span><span id="28"></span></div>
+						<div><span>40</span> <span id="29">cart.additem(apple);</span></div>
+						<div><span>41</span> <span id="30">cart.additem(apple);</span></div>
+						<div><span>42</span> <span id="31">cart.additem(apple);</span></div>
+						<div><span>43</span><span id="32"></span></div>
+						
+					</div>
 				</div>
 			</div>
 			<div class="input">
-				<input type="text" class="your_input">
+				<input type="text" class="your_input" autofocus id="written" placeholder="Copy those lines here">
 				<div></div>
 			</div>
 		</div>
@@ -36,9 +67,39 @@
 				<div class="text_area color_vim">
 					
 					<div class="text_stage">
-						<span>101</span>	
+						<div><span>12</span> <span id="1_vim">var Item = function (name, price){</span></div>
+						<div><span>13</span> <span id="2_vim" class="ident">this.name = name;</span></div>
+						<div><span>14</span> <span id="3_vim" class="ident">this.price = price;</span></div>
+						<div><span>15</span> <span id="4_vim">}</span></div>
+						<div><span>16</span><span id="5_vim"></span></div>
+						<div><span>17</span> <span id="6_vim">var apple = new Item ('apple',10);</span></div>
+						<div><span>18</span> <span id="7_vim">var orange = new Item ('orange', 5);</span></div>
+						<div><span>19</span> <span id="8_vim">var grapes = new Item ('grapes', 15);</span> </div>
+						<div><span>20</span><span id="9_vim"></span></div>
+						<div><span>21</span> <span id="10_vim">var ShoppingCart = function (){</span></div>
+						<div><span>22</span><span id="11_vim"></span></div>
+						<div><span>23</span> <span id="12_vim" class="ident">this.list = [];</span></div>
+						<div><span>24</span><span id="13_vim"></span></div>
+						<div><span>25</span> <span id="14_vim" class="ident">this.calctotal = function(){</span></div>
+						<div><span>26</span><span id="15_vim"></span></div>
+						<div><span>27</span> <span id="16_vim" class="ident2">var total = 0;</span></div>
+						<div><span>28</span><span id="17_vim"></span></div>
+						<div><span>29</span> <span id="18_vim" class="ident2">this.list.forEach(function (item)</span></div>
+						<div><span>30</span> <span id="19_vim" class="ident2">{</span></div>
+						<div><span>31</span> <span id="20_vim" class="ident3">total += item.price;</span></div>
+						<div><span>32</span> <span id="21_vim" class="ident2">});</span></div>
+						<div><span>33</span><span id="22_vim"></span></div>
+						<div><span>34</span> <span id="23_vim" class="ident">};</span></div>
+						<div><span>35</span> <span id="24_vim">}</span></div>
+						<div><span>36</span><span id="25_vim"></span></div>
+						<div><span>37</span><span id="26_vim"></span></div>
+						<div><span>38</span> <span id="27_vim">var cart = new ShoppingCart ();</span></div>
+						<div><span>39</span><span id="28_vim"></span></div>
+						<div><span>40</span> <span id="29_vim">cart.additem(apple);</span></div>
+						<div><span>41</span> <span id="30_vim">cart.additem(apple);</span></div>
+						<div><span>42</span> <span id="31_vim">cart.additem(apple);</span></div>
+						<div><span>43</span><span id="32_vim"></span></div>
 					</div>
-
 				</div>
 			</div>
 			<div class="input">
@@ -47,3 +108,8 @@
 
 	</div>
 </div>
+
+
+
+
+						
