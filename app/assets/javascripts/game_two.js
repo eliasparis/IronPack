@@ -265,7 +265,7 @@ $(document).ready(function(){
 			var request = $.ajax({
 							data: {points: points, game: 2},
 							type: "POST",
-							url: "http://localhost:3000/points_updating",
+							url: "/points_updating",
 							success: console.log('Points sended'),
 			});
 

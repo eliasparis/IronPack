@@ -1,8 +1,19 @@
 .ranking_bg{
 	background-color: gold;
-	width: 100%;
-	min-height: 100%;
 	padding-top: 15px;
+  width: 100%;
+  height: 100%;
+
+}
+
+.ranking_container{
+  width: 850px;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+  text-align: center;
 }
 
 .back_button_rk{
@@ -42,6 +53,64 @@
   font-family: lobster_regular;
   font-size: 26px;
   margin: 9px;
+}
+
+.ranking_pics{
+  height: 80px;
+  width: 80px;
+}
+
+.other_rankings{
+  display: block;
+  max-width: 100%;
+  position: relative;
+  margin-top: 80px;
+}
+
+.other_ranking_container{
+  display: block;
+  width: 800px;
+  position: absolute;
+  text-align: center;
+  left:50%;
+   -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+}
+
+.other_rainbow{
+  display: inline-block;
+  margin: 5px;
+
+}
+
+.other_shooter{
+  display: inline-block;
+  margin: 5px;
+}
+
+.by_game{
+  font-size: 28px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 15px;
+}
+
+.by_game2{
+  font-size: 25px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 13px;
+}
+.by_game3{
+  font-size: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 11px;
+}
+
+.user_coincidence{
+  background-color: white;
 }
 
 .space {

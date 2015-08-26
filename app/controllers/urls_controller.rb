@@ -8,15 +8,32 @@ class UrlsController < ApplicationController
 	end
 
 	def ranking
-		@users_with_rk = User.where(complete: 'true')
-		@users_sorted = @users_with_rk.sort_by{|object| object[:points]}.reverse
+		@users_ranking = Ranking.get_users_rk(User.all)
+		@users_sorted = Ranking.sorted_by_points(@users_ranking)
+
+		@users_ranking_one = Ranking.get_users_rk_game_one(User.all)
+		@users_sorted_one = Ranking.sorted_by_seconds(@users_ranking_one)
+
+		@users_ranking_two = Ranking.get_users_rk_game_two(User.all)
+		@users_sorted_two = Ranking.sorted_by_points(@users_ranking_two)
+
 		render 'rankings'
 	end
 
 	def points_refresh
-			Ranking.create(user_id: current_user.id, game: params[:game].to_i, points: params[:points].to_i)
+		Ranking.create(game: params[:game].to_i, points: params[:points].to_i, user_id: current_user.id)
 	end
 
 	private
 	
 end
+
+
+
+
+
+
+
+
+
+
