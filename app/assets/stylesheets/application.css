@@ -48,3 +48,13 @@ html, body {
   height: 100%;
   width: 100%;
 }
+
+.intro_plus{
+  margin-top: 200px;
+}
+
+.intro_center{
+  text-align: center;
+  color: #463a4b;
+  font-family: 'Consolas', verdana;
+}

@@ -6,7 +6,8 @@ $(document).ready(function(){
 		$('.gift_box_each').remove();
 		$('.gift_box_open').css('visibility','visible')
 
-		var iron_pack = ['<p class="text_discover">Here you have a big bunch of cool links provided by the best mentors <br>that will keep you updated <br> about </p>'];
+		var iron_pack = ['<p class="text_discover">Here you have a big bunch of cool links provided by the best mentors <br>and proffesors in Iron Hack. This will help you updated <br>with the latest info on <br>web development community, tools, trends & news. <br>Enjoy it and have fun playing your favourite game again and improoving your puntiation.</p>'];
+
 		$('.gift_box_open').prepend(iron_pack);
 		
 		var request = $.ajax({

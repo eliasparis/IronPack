@@ -1,11 +1,18 @@
-<h1> Enter a promocode moth*****r</h1>
+
+<div class="two_ins_background ">
+	<div class="two_scroller intro_plus">
+		<div class="two_container intro_center ">
+		<h1> Enter a valid iron-pack promocode </h1>
 
 
-<%= form_tag('/introdone', method: "post") do %>
-  <%= text_field_tag(:promocode) %>
-  <%= submit_tag("Play") %>
-<% end %>
+		<%= form_tag('/introdone', method: "post") do %>
+		  <%= text_field_tag(:promocode) %>
+		  <%= submit_tag("Play") %>
+		<% end %>
 
-<% if current_user %>
-<h2>Or continue playing as  <%= link_to current_user.name , {:action => :index} %></h2>
-<% end%>
+		<% if current_user %>
+		<h2>Or continue playing as  <%= link_to current_user.name , {:action => :index} %></h2>
+		<% end%>
+		</div>
+	</div>
+</div>
