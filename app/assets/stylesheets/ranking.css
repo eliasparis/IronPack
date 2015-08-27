@@ -99,6 +99,11 @@
   margin: 5px;
 }
 
+.other_pinch{
+  display: inline-block;
+  margin: 5px;
+}
+
 .by_game{
   font-size: 28px;
   padding-left: 15px;
