@@ -35,7 +35,7 @@
 
 .color_sub{
 	background-color: #251d21;
-	color: lightgray;
+	color: #969696;
 
 }
 
@@ -106,10 +106,10 @@
 	padding: 22px 15px 20px 15px;
 	font-family: Consolas, monaco, monospace;
 	font-size: 16px;
-	-webkit-user-select: none;  
+	/*-webkit-user-select: none;  
   	-moz-user-select: none;     
   	-ms-user-select: none;      
-  	user-select: none;       
+  	user-select: none;   */    
 }
 
 .input{
@@ -119,6 +119,8 @@
 .your_input{
 	width: 100%;
 	height: 25px;
+	font-size: 15px;
+	padding-left: 5px;
 }
 
 .ident{
@@ -136,3 +138,155 @@
 .ident4{
 	margin-left: 72px;
 }
+
+.blue_t{
+	color: #6bd8f1;
+}
+
+.green_t{
+	color: #aae200;
+}
+
+.red_t{
+	color: #e9306e;
+}
+
+.orange_t{
+	color: #fea700;
+}
+
+.white_t{
+	color: white;
+}
+
+.lila_t{
+	color: #ab80ff;
+}
+
+.yellow_t{
+	color: #ece168;
+}
+
+.red_v{
+	color: #db1406;
+}
+
+.blue_v{
+	color: #5851a8;
+}
+
+.brown_v{
+	color: #bd7218;
+}
+
+.turq_v{
+	color: #2beed1;
+}
+
+#ok_or_nop{
+	color: #2beed1;
+	margin-top: 10px;
+	font-family: lobster_regular, verdana;
+	font-size: 35px;
+	text-align: center;
+	text-shadow: 3px 2px black; 
+}
+
+.pinch_avatar{
+	width: 65px;
+	height: 65px;
+	background-image: url('/pinch.jpg');
+	background-size: cover;
+	border-radius: 5px;
+	margin-right: 45px;
+	display: inline-block;
+}
+
+.pinch_comments{
+	display: inline-block;
+	float: right;
+	margin-right: 20px;
+
+}
+
+.chat-thread{
+	margin-top: 10px;
+  margin-left: 20px; 
+  padding-right: 25px;
+  padding-left: 15px;
+  height: 30px;
+  font-family: Consolas, monaco, monospace;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #3AF5D9;
+  position: relative;
+
+}
+
+.chat-thread div{
+	color: #8030E9;
+	padding: 5px;
+	padding-top: 7px;
+}
+
+.chat-thread:after {
+	position: relative;
+  top: -23px;
+  content: '';
+  width: 0;
+  height: 0;
+  border-top: 15px solid #3AF5D9;
+  border-right: 15px solid transparent;
+  right: -38px;
+  float: right;
+}
+
+.input_right{
+	width: 30%;
+	float: right;	
+}
+
+.input_left{
+	width: 70%;
+	height: 40px;
+	float: left;
+
+}
+
+.scary_pinch{
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: rgba(19, 34, 37, 0.54);
+}
+
+.scary_pinch div{
+	border-radius: 50%;
+	background-image: url('/resplandor.jpg');
+	background-size: cover;
+	position: absolute;
+	width: 600px;
+	height: 600px;
+	left: 50%;
+	top: 50%;
+	  -webkit-transform: translateX(-50%) translateY(-50%);
+	      -ms-transform: translateX(-50%) translateY(-50%);
+	          transform: translateX(-50%) translateY(-50%);
+}
+
+.scary_pinch span{
+	  position: absolute;
+	  color: #ff0f73;
+	  font-size: 250px;
+	  left: 50%;
+	  top: 50%;
+	  -webkit-transform: translateX(-50%) translateY(-50%);
+	      -ms-transform: translateX(-50%) translateY(-50%);
+	          transform: translateX(-50%) translateY(-50%);
+	  text-align: center;
+	  font-family: lobster_regular, verdana;
+	  text-shadow: 4px 4px #000;
+	  margin-bottom: 25px;
+}
+
