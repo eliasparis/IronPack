@@ -11,11 +11,38 @@
   position: absolute;
   width: 100%;
   height: 100%;
+  top: -100%;
   left: 50%;
   -webkit-transform: translateX(-50%) ;
         -ms-transform: translateX(-50%);
             transform: translateX(-50%);
   display: block;
+}
+
+.three_animation{
+	animation-duration: 1.2s;
+    animation-name: batle;
+    animation-timing-function: ease-out;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes batle {
+  70%{top: 50px;}
+  100%{top: 0px; }  
+}
+
+@-webkit-keyframes batle {
+  70%{top: 50px;}
+  100%{top: 0px;}  
+}
+
+.three_scroller_2{
+  color: white;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
 }
 
 .area{
@@ -26,7 +53,6 @@
 
 .sublime{
 	float: left;
-	
 }
 
 .vim{
@@ -106,10 +132,10 @@
 	padding: 22px 15px 20px 15px;
 	font-family: Consolas, monaco, monospace;
 	font-size: 16px;
-	/*-webkit-user-select: none;  
+	-webkit-user-select: none;  
   	-moz-user-select: none;     
   	-ms-user-select: none;      
-  	user-select: none;   */    
+  	user-select: none;       
 }
 
 .input{
@@ -288,5 +314,65 @@
 	  font-family: lobster_regular, verdana;
 	  text-shadow: 4px 4px #000;
 	  margin-bottom: 25px;
+}
+
+.prev_subl{
+	margin-top: 80px;
+	width: 500px;
+	height: 280px;
+	position: relative;
+	left: 50%;
+  	-webkit-transform: translateX(-50%) ;
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+  	display: block;
+  	margin-bottom: 120px;
+}
+
+.prev_subl_txt{
+	font-family: verdana;
+	color: lightgray;
+	text-align: center;
+	margin-top: 20px;
+	font-size: 14px;
+}
+
+.input_subl{
+	margin-top: 80px;
+	width: 500px;
+	height: 280px;
+	position: absolute;
+	left: 50%;
+  	-webkit-transform: translateX(-50%) ;
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+  	display: block;
+  	margin-bottom: 120px;
+}
+
+.keypic{
+	width: 120px;
+	height: 120px;
+	background-image: url('/keyboard.png');
+	margin-top: 80px;
+	margin-left: 180px;
+	background-size: cover;
+}
+
+.warnpic{
+	width: 120px;
+	height: 120px;
+	background-image: url('/warn.png');
+	margin-top: 80px;
+	margin-left: 180px;
+	background-size: cover;
+}
+
+.intr_animation{
+	color: lightgray;
+	font-family: 'Consolas';
+	margin-left: 90px;
+	margin-top: 95px;
+
 }
 

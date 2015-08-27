@@ -17,6 +17,9 @@ class UrlsController < ApplicationController
 		@users_ranking_two = Ranking.get_users_rk_game_two(User.all)
 		@users_sorted_two = Ranking.sorted_by_points(@users_ranking_two)
 
+		@users_ranking_three = Ranking.get_users_rk_game_three(User.all)
+		@users_sorted_three = Ranking.sorted_by_points(@users_ranking_three)
+
 		render 'rankings'
 	end
 

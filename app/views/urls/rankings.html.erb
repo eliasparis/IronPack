@@ -91,7 +91,8 @@
 
 					<div class="other_rainbow">
 						<img src="/rbpic.jpg" class="repeat_game_pic ranking_pics">
-							
+						<% if @users_sorted_one.count >= 3 %>	
+							<!--  -->
 							<% if @users_sorted_one[0][:id] === current_user.id %>
 								<div class="ranking_winner by_game user_coincidence" >
 							<% else %>
@@ -123,22 +124,24 @@
 								</div>
 
 							<% @users_sorted_one.each.with_index do |user, index|%>
-							<%if index>2 && index<5%>
-							<%if user[:id] === current_user.id %>
-								<div class="ranking_loosers by_game3 user_coincidence" >
-							<%else%>
-								<div class="ranking_loosers by_game3">
-							<%end%>		
-								<%= index +1 %>    <%= user[:name]%>  <span style="font-size: 16px;"><%= user[:points]%> miliseconds</span>
-								</div>
-							<%end%>
+								<%if index>2 && index<5%>
+								<%if user[:id] === current_user.id %>
+									<div class="ranking_loosers by_game3 user_coincidence" >
+								<%else%>
+									<div class="ranking_loosers by_game3">
+								<%end%>		
+									<%= index +1 %>    <%= user[:name]%>  <span style="font-size: 16px;"><%= user[:points]%> miliseconds</span>
+									</div>
+								<%end%>
 							<% end%>
-
-							</div>
+							<!--  -->
+						<% end %>
+					</div>
 
 					<div class="other_shooter">
 						<img src="/str.jpg" class="repeat_game_pic ranking_pics">
-							
+							<% if @users_sorted_two.count >= 3 %>	
+							<!--  -->
 							<% if @users_sorted_two[0][:id] === current_user.id %>
 								<div class="ranking_winner by_game user_coincidence">
 							<% else %>
@@ -180,11 +183,66 @@
 								<%= index +1 %>    <%= user[:name]%>  <span style="font-size: 16px;"><%= user[:points]%> points</span>
 								</div>
 							<%end%>
+						
 						<% end%>
+						<!--  -->
+						<% end %>
 
-							</div>
 					</div>
-					
+
+
+					<div class="other_pinch">
+						<img src="/sblm.jpg" class="repeat_game_pic ranking_pics">
+							<% if @users_sorted_two.count >= 3 %>	
+							<!--  -->
+							<% if @users_sorted_three[0][:id] === current_user.id %>
+								<div class="ranking_winner by_game user_coincidence">
+							<% else %>
+								<div class="ranking_winner by_game">
+							<%end%>
+									<span style="color: #ff0a7c;">1</span>
+									<span style="color: #3a2447;"><%= @users_sorted_three[0][:name] %></span>
+									<span style="font-size: 24px;"><%= @users_sorted_three[0][:points] %> points</span>
+								</div>
+
+							<% if @users_sorted_three[1][:id] === current_user.id%>
+								<div class="ranking_next by_game2 user_coincidence" >
+							<% else %>
+								<div class="ranking_next by_game2">
+							<%end%>
+									<span style="color: #1CC2EE;">2</span>
+									<span style="color: #243a47;"><%= @users_sorted_three[1][:name] %></span>
+									<span style="font-size: 18px;"><%= @users_sorted_three[1][:points] %> points</span>
+								</div>
+							
+
+							<% if @users_sorted_three[2][:id] === current_user.id%>
+								<div class="ranking_next by_game2 user_coincidence" >
+							<% else %>
+								<div class="ranking_next by_game2">
+							<%end%>
+									<span style="color: #a249da;">3</span>
+									<span style="color: #243a47;"><%= @users_sorted_three[2][:name] %></span>
+									<span style="font-size: 18px;"><%= @users_sorted_three[2][:points] %> points</span>
+								</div>
+
+						<% @users_sorted_three.each.with_index do |user, index|%>
+							<%if index>2 && index<5%>
+							<%if user[:id] === current_user.id %>
+								<div class="ranking_loosers by_game3 user_coincidence">
+							<%else%>
+								<div class="ranking_loosers by_game3">
+							<%end%>		
+								<%= index +1 %>    <%= user[:name]%>  <span style="font-size: 16px;"><%= user[:points]%> points</span>
+								</div>
+							<%end%>
+						<% end%>
+						<!--  -->
+						<% end %>
+						</div>
+					</div>
+					</div>
+
 				</div>
 				
 			</div>

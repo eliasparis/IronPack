@@ -269,6 +269,7 @@
   font-family: lobster_regular, verdana;
   color: #28122b;
   text-align: center;
+   cursor: pointer;
 }
 
 #game_two_play{

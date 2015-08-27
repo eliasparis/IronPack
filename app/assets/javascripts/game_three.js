@@ -1,5 +1,61 @@
 $(document).ready(function(){
 	
+	var test_1 = ['<span class="blue_t">var</span><span class="green_t"> Item</span><span class="red_t"> =</span> <span class="blue_t">function </span><span class="white_t">(</span><span class="orange_t">name, price</span><span class="white_t">){</span>',
+							'<span class="white_t">this.name</span><span class="red_t"> =</span>  <span class="white_t">name;</span>',
+							'<span class="white_t">this.price</span><span class="red_t"> =</span>  <span class="white_t">price;</span>',
+							'<span class="white_t">}</span>'];
+
+	var test_2 = [];
+	var count_d_n = 3
+	var num = 0;
+	
+	function beginNoColor(){
+		
+		if (num <4) {
+			$('#'+num+'_test').html(test_1[num]);
+			num++
+			setTimeout(beginNoColor,1400);
+		}else{
+			setTimeout(beginColor,2300);
+		};
+	};
+
+	function beginColor(){
+		num = 0;
+		$('span').removeClass('white_t blue_t green_t red_t orange_t');
+		if ($('.three_scroller').hasClass('three_animation')){
+			console.log('basta');
+		}else{
+			setTimeout(beginNoColor,2100);
+		}
+	};
+
+	setTimeout(beginNoColor, 1300);
+
+	$('#game_two_play').on('click', theLastCounter);
+
+	function theLastCounter(){
+		if (count_d_n > 0) {
+			var count_d = ['<div class="count_d" style="color: white;">' + count_d_n +'</div>']
+			$('.three_scroller_2').html(count_d);
+			count_d_n--;
+			setTimeout(theLastCounter, 1000);
+		}else{
+			moovingThings();
+		}; 
+	}
+
+	function moovingThings(){
+		
+		setTimeout(playGameThree, 1300);
+		$('.three_scroller_2').remove();
+		$('.pinch_comments').css("visibility", 'hidden');
+		$('.three_scroller').addClass('three_animation'); 
+		
+	};
+
+	function playGameThree(){
+
 	var i = 1;
 	var x = 1;
 	var points = 0;
@@ -110,7 +166,7 @@ $(document).ready(function(){
 		};
 	}();
 
-	var pinchitoSay = ['Ey you Cheeky Bastards','Welcome to HackerSchool','I love JavaScript','@pinchito','W T F','Halt!! HammerZeit!'];
+	var pinchitoSay = ['Ey you Cheeky Bastards','Welcome to HackerSchool','I love JavaScript','@pinchito','W T F','Halt! HammerZeit!'];
 
 	function getRandom(maxSize) {
 		return parseInt(Math.random() * maxSize);
@@ -161,6 +217,8 @@ $(document).ready(function(){
 	}
 
 	pinchitoNoTalking();
+
+	};
 
 });
 
