@@ -157,7 +157,7 @@ $(document).ready(function(){
 		if (x < 32) {
  			$('#'+x+'_vim').html(colored_text_vim[(x-1)])
  			x++
-			setTimeout(vim, getRandomInt(4600,6500));
+			setTimeout(vim, getRandomInteract(1000,1500));
 		}else{
 			scaredPinchito();
 			cleanThings();
@@ -172,8 +172,8 @@ $(document).ready(function(){
 		return parseInt(Math.random() * maxSize);
 	};
 
-	function getRandomInt(min, max) {
-    	return Math.floor(Math.random() * (max - min + 1)) + min;
+	function getRandomInteract(mini, maxi) {
+    	return Math.floor(Math.random() * (maxi - mini + 1)) + mini;
 	};
 
 	function scaredPinchito(){
@@ -205,7 +205,7 @@ $(document).ready(function(){
 	function pinchitoNoTalking(){
 		$('.pinch_comments').css("visibility", 'hidden');
  		
-		setTimeout(pinchitoTalking, getRandomInt(2900,4000));
+		setTimeout(pinchitoTalking, getRandomInteract(2900,4000));
 	};
 
 	function pinchitoTalking(){
@@ -213,7 +213,7 @@ $(document).ready(function(){
 		$('#pinch_say').text(pinchitoSay[z]);
 		$('.pinch_comments').css("visibility", 'visible');
 
-		setTimeout(pinchitoNoTalking, getRandomInt(2000,3100));
+		setTimeout(pinchitoNoTalking, getRandomInteract(2000,3100));
 	}
 
 	pinchitoNoTalking();

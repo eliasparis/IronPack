@@ -68,19 +68,16 @@ class Ranking < ActiveRecord::Base
 
 	def self.get_users_rk(users)
 		final_ranking_no_sorted = []
-		x = 0 
+		users.each do |user|
 
-		while x < users.length do
-
-			if users[x].complete? 
-				final_points = points_game_one(users[x].id) + points_game_two(users[x].id) + points_game_three(users[x].id)
-				user_name = users[x].name
-				id = users[x].id
+			if user.complete? 
+				final_points = points_game_one(user.id) + points_game_two(user.id) + points_game_three(user.id)
+				user_name = user.name
+				id = user.id
 				user_and_points = {points: final_points, name: user_name, id: id }
 				final_ranking_no_sorted.push(user_and_points)
 			else
 			end
-			x+=1
 		end
 		return final_ranking_no_sorted
 	end
@@ -91,7 +88,7 @@ class Ranking < ActiveRecord::Base
 		results1.each do |num|
 			points1.push(num.points)		 	
 		end
-		points1.max
+		points1.max || 0
 	end
 
 	def self.points_game_two(x)
@@ -100,7 +97,7 @@ class Ranking < ActiveRecord::Base
 		results2.each do |num|
 			points2.push(num.points)		 	
 		end
-		points2.max 
+		points2.max || 0
 	end
 
 	def self.points_game_three(x)
@@ -109,7 +106,7 @@ class Ranking < ActiveRecord::Base
 		results3.each do |num|
 			points3.push(num.points)		 	
 		end
-		points3.max 
+		points3.max || 0
 	end
 
 end
