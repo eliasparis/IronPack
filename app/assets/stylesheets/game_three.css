@@ -25,7 +25,6 @@
     animation-timing-function: ease-out;
     animation-play-state: running;
     animation-fill-mode: forwards;
-
 }
 
 @keyframes batle {
@@ -373,6 +372,14 @@
 	font-family: 'Consolas';
 	margin-left: 90px;
 	margin-top: 95px;
+}
 
+#game_three_play{
+  position: absolute;
+  font-size: 70px;
+  margin-bottom: 50px; 
+  -webkit-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
 }
 

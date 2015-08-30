@@ -24,7 +24,6 @@ $(document).ready(function(){
 		num = 0;
 		$('span').removeClass('white_t blue_t green_t red_t orange_t');
 		if ($('.three_scroller').hasClass('three_animation')){
-			console.log('basta');
 		}else{
 			setTimeout(beginNoColor,2100);
 		}
@@ -32,7 +31,7 @@ $(document).ready(function(){
 
 	setTimeout(beginNoColor, 1300);
 
-	$('#game_two_play').on('click', theLastCounter);
+	$('#game_three_play').on('click', theLastCounter);
 
 	function theLastCounter(){
 		if (count_d_n > 0) {
@@ -127,6 +126,8 @@ $(document).ready(function(){
 							''
 							];
 
+	vim();
+
 	$(window).keyup(function(e) {
 		if (e.keyCode === 13) {
 			var value = $('#written').val();
@@ -153,18 +154,18 @@ $(document).ready(function(){
 		}
 	});
 
-	! function vim(){
+	function vim(){
 		if (x < 32) {
  			$('#'+x+'_vim').html(colored_text_vim[(x-1)])
  			x++
-			setTimeout(vim, getRandomInteract(1000,1500));
+			setTimeout(vim, getRandomInteract(4500,6000));
 		}else{
 			scaredPinchito();
 			cleanThings();
 			savePoints(points);
 			setTimeout(redirectPath, 3000);
 		};
-	}();
+	};
 
 	var pinchitoSay = ['Ey you Cheeky Bastards','Welcome to HackerSchool','I love JavaScript','@pinchito','W T F','Halt! HammerZeit!'];
 
